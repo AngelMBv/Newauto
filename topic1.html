@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú AutoAcces</title>
+  <link rel="stylesheet" href="css/topic1.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="auto">Auto</span><span class="acces">Acces</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Books</a></li>
+        <li><a href="#">Listening</a></li>
+        <li><a href="#">Activities</a></li>
+        <li><a href="#">Games</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- Contenido de la página -->
+    <div class="container">
+
+        <div class="title">
+         <h1>Personal Pronouns</h1>
+        </div>
+ 
+         <p>Personal pronouns are words used in place of a noun to avoid repetition of the same name or to refer to a person, animal, object or entity without having to mention its full name. These pronouns are essential in communication, since they facilitate the fluency and clarity of language. Personal pronouns are divided into several categories based on their function and gender.</p>
+ 
+         <table>
+             <tr>
+                 <th>Subject Pronouns</th>
+                 <th>Translation in Spanish</th>
+                 <th>Example</th>
+             </tr>
+             <tr>
+                 <td><strong>I</strong></td>
+                 <td>Yo</td>
+                 <td><strong>I</strong> am a student.</td>
+             </tr>
+             <tr>
+                 <td><strong>You</strong></td>
+                 <td>Tú, Usted</td>
+                 <td><strong>You</strong> are my friend.</td>
+             </tr>
+             <tr>
+                 <td><strong>He</strong></td>
+                 <td>Él</td>
+                 <td><strong>He</strong> is a doctor.</td>
+             </tr>
+             <tr>
+                 <td><strong>She</strong></td>
+                 <td>Ella</td>
+                 <td><strong>She</strong> loves music.</td>
+             </tr>
+             <tr>
+                 <td><strong>It</strong></td>
+                 <td>Ello (neutro)</td>
+                 <td><strong>It</strong> is a cat.</td>
+             </tr>
+             <tr>
+                 <td><strong>We</strong></td>
+                 <td>Nosotros</td>
+                 <td><strong>We</strong> are students.</td>
+             </tr>
+             <tr>
+                 <td><strong>They</strong></td>
+                 <td>Ellos, Ellas</td>
+                 <td><strong>They</strong> are friends.</td>
+             </tr>
+             <tr>
+                 <th>Object Pronouns</th>
+                 <th>Translation in Spanish</th>
+                 <th>Example</th>
+             </tr>
+             <tr>
+                 <td><strong>Me</strong></td>
+                 <td>Me</td>
+                 <td>He called <strong>me</strong>.</td>
+             </tr>
+             <tr>
+                 <td><strong>Him</strong></td>
+                 <td>Él (object)</td>
+                 <td>I saw <strong>him</strong> yesterday.</td>
+             </tr>
+             <tr>
+                 <td><strong>Her</strong></td>
+                 <td>Ella (object)</td>
+                 <td>I gave <strong>her</strong> a gift.</td>
+             </tr>
+             <tr>
+                 <td><strong>Us</strong></td>
+                 <td>Nos (object)</td>
+                 <td>They invited <strong>us</strong> to the party.</td>
+             </tr>
+             <tr>
+                 <td><strong>Them</strong></td>
+                 <td>Ellos (object)</td>
+                 <td>We met <strong>them</strong> at the park.</td>
+             </tr>
+         </table>
+         <center>
+         <div class="container">
+             <h1>Personal Pronouns</h1>
+             <button id="openModalBtn">Open Activity</button>
+         </div>
+     </center>
+     <div id="myModal" class="modal">
+         <div class="modal-content">
+             <span class="close" id="closeModalBtn">&times;</span>
+             <div id="activity">
+                 <h2>Complete the Sentences</h2>
+                 <!-- Aquí se generan las preguntas de forma dinámica -->
+             </div>
+             <!-- Result message div -->
+             <div id="resultMessage" class="result-message"></div>
+             <button class="check-button" id="checkAnswersBtn">Check</button>
+             <!-- Calificación -->
+             <div id="userGrade" class="user-grade"></div>
+         </div>
+     </div>
+ </div>
+<script src="js/topic1.js"></script>
+</body>
+</html>

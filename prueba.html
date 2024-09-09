@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú AutoAcces</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 1px  rgb(190, 190, 190);
+}
+
+.logo {
+  font-size: 29px;
+}
+
+.auto {
+  color: #000000;
+}
+
+.acces {
+  color: orange;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: #000000;
+  text-decoration: none;
+  position: relative;
+  font-size: 20px;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: orange;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000000;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  header {
+    padding: 10px;
+  }
+}
+/* Agrega este bloque de código al final del archivo CSS */
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #ffffff;
+    transition: transform 0.3s ease-in-out; /* Agrega la transición aquí */
+    transform: translateY(-100%);
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  
+  .nav-links li a {
+    font-size: 18px;
+  }
+
+  header {
+    position: relative;
+  }
+}
+
+</style>
+<body>
+  <header>
+    <div class="logo">
+      <span class="auto">Auto</span><span class="acces">Acces</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Books</a></li>
+        <li><a href="#">Listening</a></li>
+        <li><a href="#">Activities</a></li>
+        <li><a href="#">Games</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- Contenido de la página -->
+    
+  </main>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+  </script>
+</body>
+</html>
